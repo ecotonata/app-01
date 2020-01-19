@@ -49,7 +49,7 @@ steps:
       args:
       - '-c'
       - |
-        gcloud source repos clone app-01-env --project=[$PROJECT_ID] && \
+        gcloud source repos clone app-01-env --project=$PROJECT_ID && \
         cd app-01-env && \
         git checkout candidate && \
         git config user.email $(gcloud auth list --filter=status:ACTIVE --format='value(account)')
